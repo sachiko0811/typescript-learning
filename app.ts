@@ -12,7 +12,8 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string) {
   }
 }
 
-const num1 = 5;
+const num1 = 5; // num1(variable): number(Type Inference)
+// let num1; // In this case, num1 can be any type 
 const num2 = 2.8;
 const printResult = true;
 const resultPhrase = 'Result: ';
