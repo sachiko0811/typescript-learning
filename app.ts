@@ -1,26 +1,16 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  // console.log(typeof n1);
-  // if(typeof n1 !== 'number' || typeof n2 !== 'number') {
-  //   throw new Error("It's not correct!");
-  // }
-  const result = n1 + n2;
-  if(showResult) {
-    console.log(phrase + result);
-    // console.log(phrase + n1 + n2);  // when the phrase is string, then the answer will be string(52.8)
-  } else {
-    return result;
-  }
-}
+// Type Inference
 
-const num1 = 5; // num1(variable): number(Type Inference)
-// let num1; // In this case, num1 can be any type 
-const num2 = 2.8;
-const printResult = true;
-const resultPhrase = 'Result: ';
+// const person: {
+//   name: string;
+//   age: number;
+// } = {
+//   name: 'Kipu',
+//   age: 25,
+// }
 
-const res = add(num1, num2, printResult, resultPhrase);
-// console.log(res);
+const person = {
+  name: 'Kipu',
+  age: 25,
+};
 
-// const num1 = "5";
-// const num2 = 2.5;
-// res = 52.5
+console.log(person);
