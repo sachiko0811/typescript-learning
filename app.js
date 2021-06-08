@@ -2,20 +2,13 @@
 //   const result = n1 + n2;
 //   return result;
 // }
-function combine(input1, input2, resultConversion) {
-    var result;
-    if ((typeof input1 === "number" && typeof input2 === "number") ||
-        resultConversion === "as-number") {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
+var u1 = { name: 'Max', age: 30 };
+// no alias version
+function greet(user) {
+    console.log("Hi, I am " + user.name);
 }
-var combinedAges = combine(30, 26, 'as-number');
-console.log(combinedAges);
-var combinedStringAges = combine('30', '26', 'as-number');
-console.log(combinedStringAges);
-var combinedNames = combine('Eve', 'Yoko', 'as-text');
-console.log(combinedNames);
+function isOlder(user, checkAge) {
+    return console.log(checkAge > user.age);
+}
+greet(u1);
+isOlder(u1, 25);
