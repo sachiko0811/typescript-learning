@@ -66,18 +66,30 @@
 
 // alias (Obj)
 
-type User = { name: string; age: number};
+// type User = { name: string; age: number};
 const u1:User = { name: 'Max', age: 30};
 
 
 // no alias version
-function greet(user: { name: string; age: number;}) {
-  console.log(`Hi, I am ` + user.name);
-}
+// function greet(user: { name: string; age: number;}) {
+//   console.log(`Hi, I am ` + user.name);
+// }
 
-function isOlder(user: { name: string; age: number}, checkAge: number) {
-  return console.log(checkAge > user.age);
-}
+// function isOlder(user: { name: string; age: number}, checkAge: number) {
+//   return console.log(checkAge > user.age);
+// }
 
 greet(u1);
 isOlder(u1, 25);
+
+// alias version
+
+type User = { name: string; age: number};
+
+function greet(user:User) {
+  console.log(`Hi, I am ${user.name}`);
+}
+
+function isOlder(user: User, checkAge: number) {
+  console.log(checkAge > user.age);
+}
